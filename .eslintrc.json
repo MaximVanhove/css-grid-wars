@@ -1,0 +1,47 @@
+{
+	"env": {
+		"browser": true,
+		"commonjs": true,
+		"es6": true,
+		"node": true
+	},
+	"parserOptions": {
+		"ecmaFeatures": {
+			"jsx": true
+		},
+		"sourceType": "module"
+	},
+	"extends": "standard",
+	"plugins": ["html"],
+	"globals": {
+		"window": true,
+		"document": true,
+		"Exception": true,
+		"process": true,
+		"Vue": true,
+		"$": true,
+		"jQuery": true,
+		"axios": true
+	},
+	"rules": {
+		"semi": ["error", "always"],
+		"indent": ["error", 4, { "SwitchCase": 1 }],
+		"comma-dangle": [
+			"error",
+			{
+				"arrays": "always-multiline",
+				"objects": "always-multiline",
+				"imports": "always-multiline",
+				"exports": "always-multiline",
+				"functions": "never"
+			}
+		],
+		"no-const-assign": "warn",
+		"no-this-before-super": "warn",
+		"no-undef": "warn",
+		"no-unreachable": "warn",
+		"no-unused-vars": "warn",
+		"constructor-super": "warn",
+		"valid-typeof": "warn"
+	}
+}
