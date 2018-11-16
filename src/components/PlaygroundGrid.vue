@@ -1,5 +1,5 @@
 <template>
-    <div class="playground-grid">
+    <div class="grid">
         <Tile
             v-for="index in area"
             :key="index"
@@ -11,7 +11,7 @@
 import Tile from '@/components/Tile';
 
 export default {
-    name: 'playground-grid',
+    name: 'grid',
 
     components: {
         Tile,
@@ -20,6 +20,7 @@ export default {
     data: () => ({
         area: [],
         columns: 9,
+        focusedTile: null,
     }),
 
     created () {
@@ -39,7 +40,7 @@ export default {
 </script>
 
 <style lang="scss">
-.playground-grid {
+.grid {
     $columns: 9;
     $size: 80;
 
@@ -59,14 +60,13 @@ export default {
     }
 }
 
-.playground-grid__tile {
-    background-color: #d2d5df;
+.grid__tile {
     grid-column-end: span 2;
     grid-row-end: span 2;
     border-radius: 10%;
 }
 
-.playground-grid__tile:nth-child(18n+10) {
+.grid__tile:nth-child(18n+10) {
     grid-column-start: 2;
 }
 </style>
